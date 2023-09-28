@@ -1,6 +1,6 @@
-name: 'The name of your action here'
+name: 'Build railwayhistorymap action'
 description: 'Provide a description here'
-author: 'Your name or organization here'
+author: 'Alexey Gorshkov'
 
 # Define your inputs here.
 inputs:

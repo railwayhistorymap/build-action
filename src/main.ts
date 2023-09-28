@@ -10,7 +10,7 @@ export async function run(): Promise<void> {
   try {
     for (const file of fs.readdirSync('.data')) {
       if (file.endsWith('.geojson')) {
-        core.info(`found file: ${file}`)
+        console.log(`found file: ${file}`)
       }
     }
 
