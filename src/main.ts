@@ -1,4 +1,5 @@
 import * as core from '@actions/core'
+import * as fs from 'fs'
 import { wait } from './wait'
 
 /**
@@ -7,6 +8,12 @@ import { wait } from './wait'
  */
 export async function run(): Promise<void> {
   try {
+    for (const file of fs.readdirSync('.data')) {
+      if (file.endsWith('.geojson')) {
+        core.info(`found file: ${file}`)
+      }
+    }
+
     const ms: string = core.getInput('milliseconds')
 
     // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
