@@ -8,6 +8,13 @@ import { wait } from './wait'
  */
 export async function run(): Promise<void> {
   try {
+    console.log('console.log')
+    console.info('console.info')
+    console.warn('console.warn')
+    core.debug('core.debug')
+    core.info('core.info')
+    core.warning('core.warning')
+
     for (const file of fs.readdirSync('.data')) {
       if (file.endsWith('.geojson')) {
         console.log(`found file: ${file}`)
